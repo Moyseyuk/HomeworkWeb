@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="AddUser.css">
+</head>
+<body>
+
+<form method="post" action="/HomeworkWeb_war/AddUser">
+    <div class="form">
+        <h1>Add user</h1><br>
+        Enter user login:<input type="text" placeholder="Enter login" name="login"><br>
+        Enter user password: <input type="text" placeholder="Enter password" name="password"><br><br>
+        Select user sex:<br>
+        <input type="radio" name="sex" value="man">Man<br>
+        <input type="radio" name="sex" value="woman">Woman<br><br>
+        Enter user description: <input type="text" placeholder="Enter description" name="description"><br><br>
+        Select user role:<br>
+        <input type="radio" name="role" value="admin">Admin<br>
+        <input type="radio" name="role" value="user">User<br><br>
+        <input type="submit">
+    </div>
+</form>
+</body>
+</html>
