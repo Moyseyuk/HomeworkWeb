@@ -1,5 +1,6 @@
 package com.tms;
 
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -10,6 +11,7 @@ import java.sql.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+@WebServlet(value = "/homework")
 public class CarsServlet extends HttpServlet {
 
     @Override
@@ -17,6 +19,11 @@ public class CarsServlet extends HttpServlet {
         PrintWriter printWriter = resp.getWriter();
 
         String id = req.getParameter("id");
+        String website = req.getParameter("by");
+        if (website != null){
+            resp.sendRedirect("https://www.youtube.com/");
+        }
+
         if (id != null) {
             try {
                 Connection connection = connectionToDatabase();
@@ -67,7 +74,7 @@ public class CarsServlet extends HttpServlet {
             statement.setString(2, owner);
             int intAge = Integer.parseInt(age.trim());
             statement.setInt(3, intAge);
-            statement.executeQuery();
+            statement.executeUpdate();
 
             statement.close();
         } catch (SQLException e) {

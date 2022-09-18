@@ -5,14 +5,5 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
-  <servlet>
-    <servlet-name>home</servlet-name>
-    <servlet-class>com.tms.CarsServlet</servlet-class>
-  </servlet>
-
-  <servlet-mapping>
-    <servlet-name>home</servlet-name>
-    <url-pattern>/homework</url-pattern>
-  </servlet-mapping>
 
 </web-app>
