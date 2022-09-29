@@ -1,4 +1,4 @@
-package com.tms.Lesson23;
+package com.tms;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

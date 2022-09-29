@@ -1,4 +1,6 @@
-package com.tms.Lesson24;
+package com.tms.Lesson24.servlet;
+
+import com.tms.Lesson24.services.LoginService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

@@ -1,4 +1,6 @@
-package com.tms.Lesson24;
+package com.tms.Lesson24.services;
+
+import com.tms.Lesson24.dao.DBService;
 
 import java.sql.*;
 

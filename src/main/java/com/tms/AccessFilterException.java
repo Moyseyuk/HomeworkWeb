@@ -1,4 +1,4 @@
-package com.tms.Lesson23;
+package com.tms;
 
 public class AccessFilterException extends RuntimeException{
 

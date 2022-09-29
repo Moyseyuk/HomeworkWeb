@@ -1,4 +1,4 @@
-package com.tms.Lesson24;
+package com.tms.Lesson24.dao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
