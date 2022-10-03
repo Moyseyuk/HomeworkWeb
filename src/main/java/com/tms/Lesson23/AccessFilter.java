@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.Locale;
 
-@WebFilter(value = "/*")
+@WebFilter(value = "/HomeworkWeb_war/homework")
 public class AccessFilter implements Filter {
 
     @Override
