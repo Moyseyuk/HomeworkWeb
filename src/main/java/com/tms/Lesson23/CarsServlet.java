@@ -1,4 +1,4 @@
-package com.tms;
+package com.tms.Lesson23;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
