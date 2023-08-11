@@ -22,17 +22,14 @@
         <constructor-arg name="number" value="1"/>
     </bean>
     <bean name="pair1" class="com.tms.Lesson28.dto.Pair">
-        <constructor-arg name="number" value="1"/>
         <constructor-arg name="horse" ref="horse1"/>
         <constructor-arg name="rider" ref="rider1"/>
     </bean>
     <bean name="pair2" class="com.tms.Lesson28.dto.Pair">
-        <constructor-arg name="number" value="2"/>
         <constructor-arg name="horse" ref="horse2"/>
         <constructor-arg name="rider" ref="rider2"/>
     </bean>
     <bean name="pair3" class="com.tms.Lesson28.dto.Pair">
-        <constructor-arg name="number" value="3"/>
         <constructor-arg name="horse" ref="horse3"/>
         <constructor-arg name="rider" ref="rider3"/>
     </bean>

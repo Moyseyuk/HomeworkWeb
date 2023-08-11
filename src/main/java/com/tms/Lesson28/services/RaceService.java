@@ -5,24 +5,28 @@ import com.tms.Lesson28.dto.Pair;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import java.util.List;
+
+@Service("raceInfo")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class RaceService {
 
-    private Pair pair1;
-    private Pair pair2;
-    private Pair pair3;
+    @Autowired
+    private List<Pair> pairs;
 
     public int compare (){
-        if (pair1.getSpeed() > pair2.getSpeed()){
-            if (pair1.getSpeed() > pair3.getSpeed()){
+        if (pairs.get(0).getSpeed() > pairs.get(1).getSpeed()){
+            if (pairs.get(0).getSpeed() > pairs.get(2).getSpeed()){
                 return 1;
             } else{
                 return 3;
             }
-        } else if (pair2.getSpeed() > pair3.getSpeed()){
+        } else if (pairs.get(1).getSpeed() > pairs.get(2).getSpeed()){
             return 2;
         } else {
             return 3;

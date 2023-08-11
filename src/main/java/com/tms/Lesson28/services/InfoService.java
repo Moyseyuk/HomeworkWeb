@@ -5,15 +5,19 @@ import com.tms.Lesson28.dto.Pair;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import java.util.List;
+
+@Service("lapInfo")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class InfoService {
 
-    private Pair pair1;
-    private Pair pair2;
-    private Pair pair3;
+    @Autowired
+    private List<Pair> pairs;
 
     public void showResults() throws InterruptedException {
 
@@ -23,9 +27,9 @@ public class InfoService {
             Thread.sleep(5000);
             System.out.println();
             System.out.println("Lap " + i);
-            System.out.println("Pair 1: lap time - " + (pair1.getSpeed()*lapTime*i) + " seconds;");
-            System.out.println("Pair 2: lap time - " + (pair2.getSpeed()*lapTime*i) + " seconds;");
-            System.out.println("Pair 3: lap time - " + (pair3.getSpeed()*lapTime*i) + " seconds;");
+            System.out.println("Pair 1: lap time - " + (pairs.get(0).getSpeed()*lapTime*i) + " seconds;");
+            System.out.println("Pair 2: lap time - " + (pairs.get(1).getSpeed()*lapTime*i) + " seconds;");
+            System.out.println("Pair 3: lap time - " + (pairs.get(2).getSpeed()*lapTime*i) + " seconds;");
         }
 
     }
