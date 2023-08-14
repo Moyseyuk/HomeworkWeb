@@ -1,7 +1,5 @@
 package com.tms.Lesson28.aspects;
 
-import org.aopalliance.intercept.MethodInterceptor;
-import org.aopalliance.intercept.MethodInvocation;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -9,7 +7,6 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Component
@@ -26,7 +23,7 @@ public class AppAspect {
         long startTime = System.currentTimeMillis();
         joinPoint.proceed();
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
-        String methodName = String.valueOf(methodSignature.getMethod());
+        String methodName = methodSignature.getMethod().getName();
         long endTime = System.currentTimeMillis();
         System.out.println("\nAspect ended on " + methodName + " after " + (endTime - startTime) + " mils");
     }
