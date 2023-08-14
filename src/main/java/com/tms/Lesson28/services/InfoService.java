@@ -1,6 +1,7 @@
 package com.tms.Lesson28.services;
 
 
+import com.tms.Lesson28.aspects.Loggable;
 import com.tms.Lesson28.dto.Pair;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,6 +20,7 @@ public class InfoService {
     @Autowired
     private List<Pair> pairs;
 
+    @Loggable
     public void showResults() throws InterruptedException {
 
         int lapTime = 5;
